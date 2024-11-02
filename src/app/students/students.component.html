@@ -1,0 +1,13 @@
+<h1>Estudantes</h1>
+
+<div class="students-container">
+  <div class="student-card" *ngFor="let student of students">
+    <h3>{{ student.nome }}</h3>
+    <p>matrícula: {{ student.id }}</p>
+    <p>curso: {{ student.curso }}</p>
+    <p>modalidade: {{ student.modalidade }}</p>
+    <p>status: {{ student.status }}</p>
+    <p>matérias: {{ student.subjects }}</p>
+    <p>livros reservados: {{ student.books }}</p>
+  </div>
+</div>

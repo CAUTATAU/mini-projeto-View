@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  background-color: #044cf4!important;
+  padding: 16px;
+}
+
+h1{
+  text-align: center;
+  color: #f0f0f0;
+  font-size: 40px;
+}
+.students-container {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza os itens dentro do grid */
+}
+
+.student-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
