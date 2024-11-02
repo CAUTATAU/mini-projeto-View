@@ -68,3 +68,19 @@ p {
   border-color: #34495e;
   color: #2c3e50;
 }
+
+.action-button {
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #ffffff;
+  margin: 10px; /* Adiciona espaçamento entre os botões */
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #2980b9;
+}
