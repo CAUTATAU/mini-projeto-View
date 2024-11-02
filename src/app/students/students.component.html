@@ -1,7 +1,14 @@
 <h1>Estudantes</h1>
-
+<input type="text"
+ placeholder="Filtrar por nome ou matrícula"
+  [(ngModel)]="filterText"
+   (input)="filterStudents()"
+    />
 <div class="students-container">
-  <div class="student-card" *ngFor="let student of students">
+  <div class="student-card"
+   *ngFor="let student of filteredStudents"
+   (click)="goToStudentProfile(student.id)"
+   >
     <h3>{{ student.nome }}</h3>
     <p>matrícula: {{ student.id }}</p>
     <p>curso: {{ student.curso }}</p>

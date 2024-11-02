@@ -13,4 +13,8 @@ export class StudentService {
   getAll():Observable<StudentDTO[]>{
     return this.http.get<StudentDTO[]>("http://localhost:8080/students");
   }
+
+  getStudent(name: string):Observable<StudentDTO>{
+    return this.http.get<StudentDTO>(`http://localhost:8080/students/${name}`);
+  }
 }

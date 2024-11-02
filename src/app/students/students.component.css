@@ -1,8 +1,4 @@
-:host {
-  display: block;
-  background-color: #044cf4!important;
-  padding: 16px;
-}
+
 
 h1{
   text-align: center;
@@ -18,9 +14,27 @@ h1{
   justify-content: center; /* Centraliza os itens dentro do grid */
 }
 
+input[type="text"] {
+  display: block;
+  width: 30%;
+  margin: 16px auto;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 .student-card {
   border: 1px solid #ccc;
   padding: 16px;
   border-radius: 8px;
   background-color: #f9f9f9;
+}
+
+.student-card:hover {
+  transform: scale(1.05);
+}
+
+.student-card h3 {
+  margin-top: 0;
 }

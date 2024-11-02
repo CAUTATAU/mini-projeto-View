@@ -1,0 +1,15 @@
+<div class="container" *ngIf="student">
+  <button class="back-button" (click)="goBack()">
+    <span>&larr;</span> Voltar
+  </button>
+  <div class="profile-card">
+    <h2>{{ student.nome }}</h2>
+    <p><span>ID:</span> <span>{{ student.id }}</span></p>
+    <p><span>Curso:</span> <span>{{ student.curso }}</span></p>
+    <p><span>Modalidade:</span> <span>{{ student.modalidade }}</span></p>
+    <p><span>Status:</span> <span>{{ student.status }}</span></p>
+    <p><span>Disciplinas matriculadas:</span> <span>{{ student.subjects }}</span></p>
+    <p><span>Livros reservados:</span> <span>{{ student.books }}</span></p>
+    <!-- Adicione outros campos conforme necessário -->
+  </div>
+</div>
