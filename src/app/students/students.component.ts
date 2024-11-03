@@ -18,7 +18,6 @@ export class StudentsComponent{
   ) {}
   ngOnInit(): void {
     this.getAllStudents();
-    console.log(this.students);
   }
 
   getAllStudents(){

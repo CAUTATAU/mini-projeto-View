@@ -8,6 +8,12 @@ import { StudentsComponent } from './students/students.component';
 import { FormsModule } from '@angular/forms';
 import { StudentProfileComponent } from './student-profile/student-profile.component';
 import { SubjectsComponent } from './subjects/subjects.component';
+import { SubjectService } from './Services/subject.service';
+import { StudentService } from './Services/student-service.service';
+import { EnrollService } from './Services/enroll.service';
+import { BooksComponent } from './books/books.component';
+import { BookService } from './Services/book.service';
+import { ReservaService } from './Services/reserva.service';
 
 
 @NgModule({
@@ -15,7 +21,8 @@ import { SubjectsComponent } from './subjects/subjects.component';
     AppComponent,
     StudentsComponent,
     StudentProfileComponent,
-    SubjectsComponent
+    SubjectsComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,13 @@ import { SubjectsComponent } from './subjects/subjects.component';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [
+    SubjectService,
+    StudentService,
+    EnrollService,
+    BookService,
+    ReservaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

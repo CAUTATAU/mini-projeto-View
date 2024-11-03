@@ -84,3 +84,7 @@ p {
 .action-button:hover {
   background-color: #2980b9;
 }
+
+.return-button:hover {
+  background-color: #c0392b;
+}

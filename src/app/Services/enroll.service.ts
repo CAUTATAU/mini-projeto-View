@@ -1,16 +1,17 @@
+import { EnrollDTO } from './../Models/enrollModel';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BookDTO } from '../Models/BookModel';
 import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class BookService {
+export class EnrollService {
 
   constructor(private http: HttpClient) {}
 
-  getAll():Observable<BookDTO[]>{
-    return this.http.get<BookDTO[]>("http://localhost:8080/books");
+  enroll(data: EnrollDTO):Observable<any>{
+    return this.http.post<any>("http://localhost:8080/enroll",data);
   }
 }

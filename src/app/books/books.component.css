@@ -5,7 +5,7 @@
   color: #f9f9f9;
 }
 
-.subjects-container {
+.books-container {
   display: grid;
   width: 80%;
   gap: 16px;
@@ -13,7 +13,7 @@
   justify-content: center; /* Centraliza os itens dentro do grid */
 }
 
-.subject-item {
+.book-item {
   border: 1px solid #ccc;
   padding: 16px;
   border-radius: 8px;
@@ -21,11 +21,11 @@
   transition: transform 0.2s;
 }
 
-.subject-item:hover {
+.book-item:hover {
   transform: scale(1.05);
 }
 
-.subject-item h3 {
+.book-item h3 {
   margin-top: 0;
 }
 
@@ -68,6 +68,16 @@
 .confirmation-content button:last-child {
   background-color: #f44336;
   color: white;
+}
+
+.status-available {
+  font-weight: bolder;
+  color: green;
+}
+
+.status-reserved {
+  font-weight: bolder;
+  color: red;
 }
 
 input[type="text"] {

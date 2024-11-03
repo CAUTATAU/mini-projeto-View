@@ -8,10 +8,23 @@
     <p><span>Curso:</span> <span>{{ student.curso }}</span></p>
     <p><span>Modalidade:</span> <span>{{ student.modalidade }}</span></p>
     <p><span>Status:</span> <span>{{ student.status }}</span></p>
-    <p><span>Disciplinas matriculadas:</span> <span>{{ student.subjects }}</span></p>
-    <p><span>Livros reservados:</span> <span>{{ student.books }}</span></p>
+    <p><span>Disciplinas matriculadas:</span></p>
+    <ul>
+      <li *ngFor="let subject of student.subjects">
+        {{ subject.nome }}
+      </li>
+    </ul>
+
+    <!-- Livros reservados -->
+    <p><span>Livros reservados:</span></p>
+    <ul>
+      <li *ngFor="let book of student.books">
+        {{ book.titulo }}
+        <button class="return-button" (click)="returnBook(book.id)">Devolver Livro</button>
+      </li>
+    </ul>
     <!-- Adicione outros campos conforme necessário -->
-    <button class="action-button" >Matricular em Disciplina</button>
-    <button class="action-button" >Alugar Livros</button>
+    <button class="action-button" (click)="goToSubjects()" >Matricular em Disciplina</button>
+    <button class="action-button" (click)="goToBooks()" >Alugar Livros</button>
   </div>
 </div>

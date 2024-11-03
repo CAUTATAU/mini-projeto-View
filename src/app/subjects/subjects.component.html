@@ -1,1 +1,25 @@
-<p>subjects works!</p>
+<h1 class="title">Disciplinas</h1>
+
+<input type="text"
+ placeholder="Filtrar por nome"
+  [(ngModel)]="filterText"
+   (input)="filterSubjects()"
+    />
+
+
+
+<div class="subjects-container">
+  <div *ngFor="let subject of filteredSubjects" class="subject-item" (click)="selectSubject(subject.id)">
+    <h3>{{ subject.nome }}</h3>
+  </div>
+</div>
+
+<div *ngIf="showConfirmationDialog" class="confirmation-dialog">
+  <div class="confirmation-content">
+    <h2>Confirmação de Matrícula</h2>
+    <p>Aluno: {{ student?.nome }}</p>
+    <p>Disciplina: {{ selectedSubject?.nome }}</p>
+    <button (click)="confirmEnrollment()">Confirmar</button>
+    <button (click)="cancelEnrollment()">Cancelar</button>
+  </div>
+</div>

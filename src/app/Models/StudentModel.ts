@@ -10,3 +10,4 @@ export interface StudentDTO {
     subjects: SubjectDTO[];
     books: BookDTO[];
 }
+

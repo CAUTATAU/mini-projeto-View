@@ -1,0 +1,29 @@
+<h1 class="title">Livros</h1>
+
+<input type="text"
+ placeholder="Filtrar por nome"
+  [(ngModel)]="filterText"
+   (input)="filterBooks()"
+    />
+
+
+<div class="books-container">
+  <div *ngFor="let book of filteredBooks" class="book-item" (click)="book.status !== 'Reservado' && selectBook(book.id)">
+    <h3>{{ book.titulo }}</h3>
+    <p>Autor: {{ book.autor }}</p>
+    <p>Ano: {{ book.ano }}</p>
+    <p [ngClass]="{'status-available': book.status === 'Disponível', 'status-reserved': book.status === 'Reservado'}">
+      Status: {{ book.status }}
+    </p>
+  </div>
+</div>
+
+<div *ngIf="showConfirmationDialog" class="confirmation-dialog">
+  <div class="confirmation-content">
+    <h2>Confirmação de Reserva</h2>
+    <p>Livro: {{ selectedBook?.titulo }}</p>
+    <p>Autor: {{ selectedBook?.autor }}</p>
+    <button (click)="confirmReservation()">Confirmar</button>
+    <button (click)="cancelReservation()">Cancelar</button>
+  </div>
+</div>
